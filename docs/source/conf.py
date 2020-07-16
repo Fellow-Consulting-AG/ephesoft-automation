@@ -21,7 +21,7 @@ sys.path.insert(0, os.path.abspath('../..'))
 
 # -- Project information -----------------------------------------------------
 
-project = 'InforWorkflow'
+project = 'Ephesoft Automation'
 copyright = '2020, Fellow Consulting AG'
 author = 'Daniel Jordan'
 
