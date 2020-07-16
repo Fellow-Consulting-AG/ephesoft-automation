@@ -14,7 +14,7 @@ Manage and load data from external systems into e.g. Infor M3 incl. data verific
 [Docker Link](https://hub.docker.com/r/fellowconsulting/ephesoft-automation)
 
 
-[![dockeri.co](https://dockeri.co/image/fellowconsulting/inforion)](https://hub.docker.com/r/fellowconsulting/ephesoft-automation)
+[![dockeri.co](https://dockeri.co/image/fellowconsulting/ephesoft-automation)](https://hub.docker.com/r/fellowconsulting/ephesoft-automation)
 
 # Dokumentation
 [Link](https://ephesoft-automation.rtfd.io)
