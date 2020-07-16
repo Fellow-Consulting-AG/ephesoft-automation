@@ -34,3 +34,4 @@ RUN python3 setup.py develop
 
 ENTRYPOINT [ "ephesoftAutomation" ]
 #CMD [ "inforflow
+
