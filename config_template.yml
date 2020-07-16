@@ -1,0 +1,28 @@
+
+# directory from where it should read result files
+source_dir: /Users/amierhaider/Fellow Consulting/Ephesoft Projects/LMG/LBV Testing/
+
+# directory from where it should read csv with original values
+csv_source_dir: /Users/amierhaider/Fellow Consulting/Ephesoft Projects/LMG/LBV Testing/
+
+# directory from where it should write results
+output_dir: /Users/amierhaider/Fellow Consulting/Ephesoft Projects/LMG/LBV Testing/
+
+# naming convention for outputfile. 1. Filename, 2. Filename with Date, 3. Filename with timestamp
+output_file_naming_convention: 2
+
+documents_list:
+  - Name: BSP
+    CSV: Liebherr-BSP.csv
+    ExtractionResults: BI8_batch.xml.zip
+  - Name: BIV
+    CSV: Liebherr-BIV.csv
+    ExtractionResults: BI7_batch.xml.zip
+
+documents_to_process: BSP
+
+show_comparison_issues_in_output: 1
+
+show_comparison_results_in_output: 1
+
+export_results_to_excel: 1
