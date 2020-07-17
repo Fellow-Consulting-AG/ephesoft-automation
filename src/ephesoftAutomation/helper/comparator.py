@@ -16,30 +16,36 @@ def get_comparison_results(ephesoft_results, original_csv_values):
 
     for docId in actual_values_doc_dict:
         original_values_dict = actual_values_doc_dict[docId]
-        extracted_val_dict = extracted_values_doc_dict[docId]
+        
+        if docId in extracted_values_doc_dict:
 
-        for field_name in extracted_val_dict:
-            extracted_field = extracted_val_dict[field_name]
-            extracted_value = extracted_field["Value"]
-            ocr_threshold = extracted_field["OcrConfidenceThreshold"]
-            ocr_confidence = extracted_field["OcrConfidence"]
+            extracted_val_dict = extracted_values_doc_dict[docId]
 
-            if field_name in original_values_dict:
-                original_value = original_values_dict[field_name]
+            for field_name in extracted_val_dict:
+                extracted_field = extracted_val_dict[field_name]
+                extracted_value = extracted_field["Value"]
+                ocr_threshold = extracted_field["OcrConfidenceThreshold"]
+                ocr_confidence = extracted_field["OcrConfidence"]
 
-                if is_matched_complex(field_name, extracted_value, original_value):
-                    if ocr_confidence > ocr_threshold:
-                        result.increment_correct_with_high_ocr_results(field_name)
+                if field_name in original_values_dict:
+                    original_value = original_values_dict[field_name]
+
+                    if is_matched_complex(field_name, extracted_value, original_value):
+                        if ocr_confidence > ocr_threshold:
+                            result.increment_correct_with_high_ocr_results(field_name)
+                        else:
+                            result.increment_correct_results(field_name)
                     else:
-                        result.increment_correct_results(field_name)
-                else:
-                    if util.check_if_empty_or_none(extracted_value):
-                        result.increment_missing_results(field_name)
-                    else:
-                        result.increment_wrong_results(field_name)
+                        if util.check_if_empty_or_none(extracted_value):
+                            result.increment_missing_results(field_name)
+                        else:
+                            result.increment_wrong_results(field_name)
 
-                    extraction_info = results.FieldResult(field_name, original_value, extracted_value)
-                    result.add_field_error_info(docId, extraction_info)
+                        extraction_info = results.FieldResult(field_name, original_value, extracted_value)
+                        result.add_field_error_info(docId, extraction_info)
+
+        else:
+            print(docId+ " is missing from extracted documents.")
 
     return result
 
