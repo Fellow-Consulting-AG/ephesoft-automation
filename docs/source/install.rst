@@ -1,20 +1,15 @@
-========
-Installl
-========
+============
+Installation
+============
 
-To install the docker image please use 
+To install the docker image, please use 
 
 .. code-block:: bash
 
-   docker run fellowconsulting/inforion
+   docker run fellowconsulting/ephesoft-automation
 
-`Dockerhub Link <https://hub.docker.com/r/fellowconsulting/inforion>`_
+`Dockerhub Link <https://hub.docker.com/r/fellowconsulting/ephesoft-automation>`_
 
-.. image:: image/dashboard-overview.png
-  :width: 500
-  :alt: Prefect.IO UI.
-
-In our docker container we use Prefect for the UI to dispaly the Workflows
 
 For example start the docker container
 
@@ -31,14 +26,14 @@ Start on Mac or Linux
 =====================
 .. code-block:: bash
 
-   docker run -v $PWD/conf:/ion-workflow/conf  fellowconsulting/inforion flow  -b /ion-workflow/conf -c credentials.yml -m modules.csv -d module_dependencies.csv 
+   docker run -v $PWD/conf:/ion-workflow/conf fellowconsulting/ephesoft-automation flow -b /ion-workflow/conf -c credentials.yml -m modules.csv -d module_dependencies.csv 
 
 Start on Windows
 ================
 
 .. code-block:: bash
 
-   docker run -v %cd%/conf:/ion-workflow/conf  fellowconsulting/inforion flow  -b /ion-workflow/conf -c credentials.yml -m modules.csv -d module_dependencies.csv 
+   docker run -v %cd%/conf:/ion-workflow/conf fellowconsulting/ephesoft-automation flow -b /ion-workflow/conf -c credentials.yml -m modules.csv -d module_dependencies.csv 
 
 
 
@@ -49,6 +44,6 @@ Uprade to Latest Build
 
 .. code-block:: bash
 
-   docker pull fellowconsulting/inforion:latest      
+   docker pull fellowconsulting/ephesoft-automation:latest      
 
 

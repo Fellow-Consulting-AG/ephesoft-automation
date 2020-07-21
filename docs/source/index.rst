@@ -14,8 +14,8 @@ Compares results extracted from Ephesoft with original/expected values to check 
    
    introduction
    install
-   run
    requirements
+   run
    cofigurationfiles
    
 

@@ -2,6 +2,6 @@
 Introduction
 ============
 
-InforFlow is a wrapper library to create Prefect based flows to migrate data from MS-SQL Sever to Infor M3.
+Ephesoft-Automation is a wrapper library to create an automatic test for  all the Batch Instances in Ephesoft that you choose.
 
-It is using Prefect library to create flows and uses InforION library to tranform and load data to M3.
+The library compares extracted results from Ephesoft with original values provided in csv files and output comparison results in an Excel file.

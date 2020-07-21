@@ -59,5 +59,5 @@ How to compare results using EphesoftAutomated Docker instance
  code . . .
 
 - with **docker run** you can run your image as a container 
-- **-v** we are mounting our local directory to docker container, so it can use files from this directory.
+- **-v** we are mounting our local directory to docker container, so it can use files from this directory
 - with **compare** we are adding the configuration files that are missing inside the Docker ecosystem
